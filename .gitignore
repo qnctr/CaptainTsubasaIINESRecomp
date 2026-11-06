@@ -1,0 +1,14 @@
+*.nes
+*.fds
+generated/
+build/
+trace.txt
+trace_trimmed.txt
+*.cdl
+*.exe
+*.dll
+*.lib
+*.obj
+framework/
+common/
+nesrecomp/
