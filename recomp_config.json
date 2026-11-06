@@ -1,0 +1,7 @@
+{
+  "rom_file": "cb2.nes",
+  "trace_file": "trace.txt",
+  "work_dir": "D:/Captain Tsubasa II",
+  "nesrecomp_dir": "D:/Captain Tsubasa II/nesrecomp",
+  "sdl2_dir": "D:/SDL2"
+}
