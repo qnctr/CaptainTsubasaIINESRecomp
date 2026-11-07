@@ -114,9 +114,20 @@ Static recompilation of the Japanese NES game **Captain Tsubasa II: Super Strike
 - **Save states** work, but cross-version compatibility is not guaranteed.
 - **Static analysis path (`game_clean.toml`) is broken.** Do not use it — it contains false positives from ROM graphics/text and will hang the game on boot.
 
-## 🤝 Contributing
+## 🐛 Found a bug? Want to help?
 
-The single most useful thing you can do is **record a trace that reaches the bug you hit** and open an Issue with it attached. Full instructions in [CONTRIBUTING.md](./CONTRIBUTING.md).
+If the game freezes, crashes, or slows down, it means the game entered a piece of code that wasn't captured in our trace logs.
+
+The best way to help is to **record a trace that reaches the bug**. 
+
+You don't need to know C or assembly. Just play the game in FCEUX, record a log, and attach it to a new Issue. A detailed step-by-step guide (how to record, how to trim the file, and what to attach) is in our **[CONTRIBUTING.md](./CONTRIBUTING.md)**.
+
+## 💡 Other ways to support the project
+
+- **Star this repository** ⭐ — it helps other NES fans find the project.
+- **Share it** — post it on Reddit (r/emulation, r/romhacking) or Twitter.
+- **Test on different hardware** — let us know if it runs well on your PC, or if you find glitches.
+- **Improve the tooling** — if you know Python or CMake, look at the "open for PRs" list in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## 🙏 Credits
 
@@ -125,22 +136,6 @@ The single most useful thing you can do is **record a trace that reaches the bug
 - [Rido911](https://github.com/Rido911) — inspiration and early NESRecomp experiments.
 - **Tecmo / Koei Tecmo** — original game.
 
-## 🐛 Found a bug? Want to help?
-If the game freezes, crashes, or slows down, it means the game entered a piece of code that wasn't captured in our trace logs.
-
-The best way to help is to record a trace that reaches the bug.
-
-You don't need to know C or assembly. Just play the game in FCEUX, record a log, and attach it to a new Issue. A detailed step-by-step guide (how to record, how to trim the file, and what to attach) is in our CONTRIBUTING.md.
-
-## 💡 Other ways to support the project:
-Star this repository ⭐ — it helps other NES fans find the project.
-
-Share it — post it on Reddit (r/emulation, r/romhacking) or Twitter.
-
-Test on different hardware — let us know if it runs well on your PC, or if you find glitches.
-
-Improve the tooling — if you know Python or CMake, look at the "open for PRs" list in CONTRIBUTING.md.
-
 ---
 
 ## 🇷🇺 Русская версия
@@ -148,11 +143,13 @@ Improve the tooling — if you know Python or CMake, look at the "open for PRs" 
 Проект занимается **статической рекомпиляцией** японской NES-игры *Captain Tsubasa II: Super Striker* в нативный C-код с помощью NESRecomp. Это **не эмулятор**.
 
 ### Что работает сейчас
+
 - Игра запускается, играет музыка, рисует графику и диалоги.
 - Около **479 функций** скомпилированы нативно (~74% циклов CPU).
 - Часть кода из переключаемых банков MMC3 (`$8000–$BFFF`) всё ещё уходит в интерпретатор — возможны просадки FPS и вылеты в поздних сценах (см. *Known Issues*).
 
 ### Быстрый старт
+
 1. Клонируй репозиторий.
 2. Положи свой `cb2.nes` в корень (ROM **не** распространяется).
 3. Установи зависимости: CMake, MSVC Build Tools, SDL2 (распакуй в `D:/SDL2`).
@@ -163,7 +160,9 @@ Improve the tooling — if you know Python or CMake, look at the "open for PRs" 
 8. Играй: `build/Release/cb2_cyc.exe cb2.nes`.
 
 ### Как помочь
+
 Самый полезный вклад — **прислать трассировку из FCEUX**, которая доходит до бага, и открыть Issue с её описанием. Подробная инструкция — в [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ### Юридическое
+
 В репозитории **нет** ROM, скомпилированного C-кода и `.exe`. Всё это пользователь собирает сам из своей копии игры. Права на игру принадлежат **Tecmo / Koei Tecmo**, права на NESRecomp — его автору **mstan**.
