@@ -125,6 +125,22 @@ The single most useful thing you can do is **record a trace that reaches the bug
 - [Rido911](https://github.com/Rido911) — inspiration and early NESRecomp experiments.
 - **Tecmo / Koei Tecmo** — original game.
 
+## 🐛 Found a bug? Want to help?
+If the game freezes, crashes, or slows down, it means the game entered a piece of code that wasn't captured in our trace logs.
+
+The best way to help is to record a trace that reaches the bug.
+
+You don't need to know C or assembly. Just play the game in FCEUX, record a log, and attach it to a new Issue. A detailed step-by-step guide (how to record, how to trim the file, and what to attach) is in our CONTRIBUTING.md.
+
+## 💡 Other ways to support the project:
+Star this repository ⭐ — it helps other NES fans find the project.
+
+Share it — post it on Reddit (r/emulation, r/romhacking) or Twitter.
+
+Test on different hardware — let us know if it runs well on your PC, or if you find glitches.
+
+Improve the tooling — if you know Python or CMake, look at the "open for PRs" list in CONTRIBUTING.md.
+
 ---
 
 ## 🇷🇺 Русская версия
